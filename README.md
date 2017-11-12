@@ -9,7 +9,7 @@ Extension will remove link to register page and registration form from login pag
 - Magento 2.1.x - 2.2.x
 
 ## Installation details
-1. Run `composer require "sbodak/magento2-b2b-disable-customer-registration":"^1.0.*"`
+1. Run `composer require sbodak/magento2-b2b-disable-customer-registration`
 2. Run `php bin/magento module:enable Bodak_DisableRegistration`
 3. Run `bin/magento setup:upgrade`
 4. Run `bin/magento clean:cache`
@@ -26,6 +26,10 @@ Extension will remove link to register page and registration form from login pag
 
 ### Remove registration form - frontend view
 ![Remove registration form](docs/customer_registration_disabled.png)
+
+
+## Uninstall
+1. Run `composer remove sbodak/magento2-b2b-disable-customer-registration`
 
 ## License
 [MIT License](LICENSE)
