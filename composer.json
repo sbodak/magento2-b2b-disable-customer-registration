@@ -1,0 +1,28 @@
+{
+  "name": "bodak/magento2-b2b-disable-customer-registration",
+  "description": "This extension allows you to disable customer registration in your Magento 2.",
+  "keywords": ["magento2", "b2b", "disable registration"],
+  "license": [
+    "MIT"
+  ],
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Slawomir Bodak",
+      "email": "slawek.bodak@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.0.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Bodak\\DisableResgitration\\": ""
+    }
+  },
+  "minimum-stability": "dev"
+}
