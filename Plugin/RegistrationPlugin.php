@@ -50,11 +50,9 @@ class RegistrationPlugin
      */
     public function afterIsAllowed(Registration $subject): bool
     {
-        $store = ScopeInterface::SCOPE_STORE;
-
-        if ($this->scopeConfig->getValue(self::DISABLE_CUSTOMER_REGISTRATION, $store)) {
-            return false;
-        }
-        return true;
+        return !$this->scopeConfig->getValue(
+            self::XML_PATH_DISABLE_CUSTOMER_REGISTRATION,
+            ScopeInterface::SCOPE_STORE
+        );
     }
 }
