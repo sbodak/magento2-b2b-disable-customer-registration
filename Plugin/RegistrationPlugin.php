@@ -29,7 +29,7 @@ class RegistrationPlugin
      */
     protected $scopeConfig;
 
-    const DISABLE_CUSTOMER_REGISTRATION = 'customer/create_account/disable_customer_registration';
+    const XML_PATH_DISABLE_CUSTOMER_REGISTRATION = 'customer/create_account/disable_customer_registration';
 
     /**
      * RegistrationPlugin constructor.
