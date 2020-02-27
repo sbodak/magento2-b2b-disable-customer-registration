@@ -6,7 +6,7 @@ It can be useful for B2B customers, if we don't want to allow them register by t
 Extension will remove link to register page and registration form from login page.
 
 ## Compatibility
-- Magento 2.1.x - 2.2.x
+- Magento 2.1.x - 2.3.x
 
 ## Installation details
 1. Run `composer require sbodak/magento2-b2b-disable-customer-registration`
