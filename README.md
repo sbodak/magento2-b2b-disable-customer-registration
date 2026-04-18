@@ -1,35 +1,67 @@
 # Magento 2 - Disable customer registration
- 
+
 ## Overview
-This module enable possibility to disable the customer registration.
-It can be useful for B2B customers, if we don't want to allow them register by themselves. 
-Extension will remove link to register page and registration form from login page.
+
+This module enables the possibility to disable customer registration on the frontend.
+It is particularly useful for B2B stores where customers should not be able to register by themselves.
+The extension removes the link to the registration page and hides the registration form on the login page.
 
 ## Compatibility
-- Magento 2.1.x - 2.3.x
 
-## Installation details
-1. Run `composer require sbodak/magento2-b2b-disable-customer-registration`
-2. Run `php bin/magento module:enable Bodak_DisableRegistration`
-3. Run `bin/magento setup:upgrade`
-4. Run `bin/magento clean:cache`
+| Module version | Magento version | PHP version     |
+|----------------|-----------------|-----------------|
+| 2.x            | 2.4.8           | 8.2, 8.3, 8.4   |
+| 1.x            | 2.1.x – 2.3.x   | 7.0, 7.1, 8.1   |
 
-## Configuration details
-1. Go to Magento admin panel
-2. Find option in `Stores > Configuration > Customers > Customer configuration`
-3. Under the `Create New Account Options` tab you will find the `Disable frontend customer registration` option
-4. `Enable` this option to activate the plugin
+## Requirements
 
+- Magento Open Source / Adobe Commerce 2.4.8
+- PHP 8.2, 8.3, or 8.4
 
-### Module configuration - administration panel
+## Installation
+
+```bash
+composer require sbodak/magento2-b2b-disable-customer-registration
+php bin/magento module:enable Bodak_DisableRegistration
+php bin/magento setup:upgrade
+php bin/magento cache:clean
+```
+
+## Configuration
+
+1. Go to the Magento admin panel
+2. Navigate to `Stores > Configuration > Customers > Customer Configuration`
+3. Under the `Create New Account Options` tab, find the `Disable frontend customer registration` option
+4. Set it to `Yes` to disable registration
+
+### Admin configuration
+
 ![Module configuration - administration panel](docs/customer_registration_disabled_configuration.png)
 
-### Remove registration form - frontend view
+### Frontend result
+
 ![Remove registration form](docs/customer_registration_disabled.png)
 
+## Development
+
+### Running unit tests
+
+```bash
+composer install
+vendor/bin/phpunit
+```
 
 ## Uninstall
-1. Run `composer remove sbodak/magento2-b2b-disable-customer-registration`
+
+```bash
+php bin/magento module:disable Bodak_DisableRegistration
+composer remove sbodak/magento2-b2b-disable-customer-registration
+```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a full history of changes.
 
 ## License
+
 [MIT License](LICENSE)
